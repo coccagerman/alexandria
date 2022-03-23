@@ -34,6 +34,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   input {
     background-color: #feffff;
@@ -67,5 +68,41 @@ section {
     &:hover {
       background-color: #5f3a66;
     }
+
+    a {
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.table {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  table {
+    padding: 4rem 0;
+    width: 80rem;
+
+    tr {
+      th {
+        border: 1px solid whitesmoke;
+        padding: .5rem;
+        font-size: 1.25rem;
+      }
+
+      td {
+        border: 1px solid whitesmoke;
+        padding: .5rem;
+      }
+    }
+
+    .highlight {
+      background-color: yellow;
+      color: black;
+    }
+
   }
 }
