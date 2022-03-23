@@ -38,7 +38,7 @@ const App:React.FC = () => {
           
           <tbody>
             {sortedContent.map((element, i) => <tr key={i}>
-                <td className='name'><a href={element.name} target='_blank' rel='noreferrer'>{element.name}</a></td>
+                <td className='name'><a href={element.url} target='_blank' rel='noreferrer'>{element.name}</a></td>
                 <td className='type' id={element.type}>{element.type}</td>
                 <td className='paidOrFree'>{element.paidOrFree}</td>
                 <td className='description'>{element.description}</td>
