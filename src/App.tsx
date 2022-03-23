@@ -1,35 +1,11 @@
-import { useState } from 'react'
-
 import './App.scss'
-
 import logo from './assets/logo.png'
-
-import content from './content/content'
-import HighlightString from './HighlightString'
+import content from './assets/Content'
 
 const App:React.FC = () => {
 
   const sortedContent = content.sort((a,b) => a.name.localeCompare(b.name)).sort((a,b) => a.type.localeCompare(b.type))
   const contentTypes = [...new Set(sortedContent.map(item => item.type)) ]
-
-  interface contentElement {
-    name: string;
-    paidOrFree: string;
-    type: string;
-    url: string;
-    description: string;
-  }
-
-  const [contentToDisplay, setContentToDisplay] = useState<Array <contentElement>>(sortedContent)
-  const [searchInput, setSearchInput] = useState<string>('')
-
-  const filterContent = () => {
-    if (!searchInput) setContentToDisplay(sortedContent)
-    else setContentToDisplay(sortedContent.filter(element =>  element['name'].toLowerCase().includes(searchInput.toLowerCase()) || 
-                                                              element['type'].toLowerCase().includes(searchInput.toLowerCase()) ||
-                                                              element['description'].toLowerCase().includes(searchInput.toLowerCase())
-    ))
-  }
 
   return (
     <div className='App'>
@@ -41,19 +17,11 @@ const App:React.FC = () => {
         <p>This is my personal repository of resources, tools and great places to learn about code.</p>
         <p>Here I've consolidated most of the assets I've found useful for my learning process, and I plan to keep adding new things as I find them along my path to become the best developer I can be.</p>
         
-        <p>Feel free to browse through the different cattegories or search for specific topics.</p>
-        <p>Recommendations are always welcome. You can email them to <a href='mailto:coccagerman@gmail.com'>coccagerman@gmail.com</a></p>
-      </section>
-
-      <section className='searchBar'>
-          <input type='text' placeholder='Search...' onChange={e => {
-            setSearchInput(e.target.value)
-            filterContent()
-          }}/>
+        <p>Feel free to browse through the different cattegories. Recommendations are always welcome. You can email them to <a href='mailto:coccagerman@gmail.com'>coccagerman@gmail.com</a></p>
       </section>
 
       <section className='sectionsBtns'>
-          {contentTypes.map(item => <button key={item}><a href={`#${item}`}>{item}</a></button>)}
+          {contentTypes.map((item, i) => <button key={i}><a href={`#${item}`}>{item}</a></button>)}
       </section>
 
       <section className='table'>
@@ -61,19 +29,19 @@ const App:React.FC = () => {
 
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Paid / Free</th>
-              <th>Description</th>
+              <th className='name'>Name</th>
+              <th className='type'>Type</th>
+              <th className='paidOrFree'>Paid / Free</th>
+              <th className='description'>Description</th>
             </tr>
           </thead>
           
           <tbody>
-            {contentToDisplay.map(element => <tr key={element.name}>
-                <td><a href={element.name} target='_blank' rel='noreferrer'>{<HighlightString strTarget={element.name} subStr={searchInput} />}</a></td>
-                <td id={element.type}>{<HighlightString strTarget={element.type} subStr={searchInput} />}</td>
-                <td>{element.paidOrFree}</td>
-                <td>{<HighlightString strTarget={element.description} subStr={searchInput} />}</td>
+            {sortedContent.map((element, i) => <tr key={i}>
+                <td className='name'><a href={element.name} target='_blank' rel='noreferrer'>{element.name}</a></td>
+                <td className='type' id={element.type}>{element.type}</td>
+                <td className='paidOrFree'>{element.paidOrFree}</td>
+                <td className='description'>{element.description}</td>
             </tr>)}
           </tbody>
 
