@@ -434,11 +434,18 @@ const content = [
         description: 'Very nice, deep and clear tutorials about a wide array of development topics'
     },
     {
-        name: 'Clément Mihailescu ',
+        name: 'Clément Mihailescu',
         paidOrFree: 'Free',
         type: 'Youtube channel',
         url: 'https://www.youtube.com/channel/UCaO6VoaYJv4kS-TQO_M-N_g',
         description: 'Good for mock technical interviews'
+    },
+    {
+        name: 'Sam Meech-Ward',
+        paidOrFree: 'Free',
+        type: 'Youtube channel',
+        url: 'https://www.youtube.com/channel/UC6aTLuI_j4-0wiDSzmaPctQ',
+        description: 'Nice AWS tutorials and other topics'
     }
 ]
 
