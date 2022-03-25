@@ -446,7 +446,21 @@ const content = [
         type: 'Youtube channel',
         url: 'https://www.youtube.com/channel/UC6aTLuI_j4-0wiDSzmaPctQ',
         description: 'Nice AWS tutorials and other topics'
-    }
+    },
+    {
+        name: 'Learnxinyminutes',
+        paidOrFree: 'Free',
+        type: 'Learn to code',
+        url: 'https://learnxinyminutes.com/',
+        description: 'Brief, cheat-code like, guides on a bunch of topics.'
+    },
+    {
+        name: 'Devhints',
+        paidOrFree: 'Free',
+        type: 'Learn to code',
+        url: 'https://devhints.io/',
+        description: 'Brief, cheat-code like, guides on a bunch of topics.'
+    }    
 ]
 
 export default content
