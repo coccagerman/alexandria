@@ -448,6 +448,20 @@ const content = [
         description: 'Nice AWS tutorials and other topics'
     },
     {
+        name: 'Crash course',
+        paidOrFree: 'Free',
+        type: 'Youtube channel',
+        url: 'https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo',
+        description: 'An amazing crash course series to introduce yourself to computer science.'
+    },
+    {
+        name: 'Techquickie',
+        paidOrFree: 'Free',
+        type: 'Youtube channel',
+        url: 'https://www.youtube.com/channel/UC0vBXGSyV14uvJ4hECDOl0Q',
+        description: 'Nice channel with general tech knowledge videos.'
+    },
+    {
         name: 'Learnxinyminutes',
         paidOrFree: 'Free',
         type: 'Learn to code',
@@ -460,7 +474,7 @@ const content = [
         type: 'Learn to code',
         url: 'https://devhints.io/',
         description: 'Brief, cheat-code like, guides on a bunch of topics.'
-    }    
+    }
 ]
 
 export default content
