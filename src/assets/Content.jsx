@@ -462,6 +462,13 @@ const content = [
         description: 'Nice channel with general tech knowledge videos.'
     },
     {
+        name: 'Manuel Zapata',
+        paidOrFree: 'Free',
+        type: 'Youtube channel',
+        url: 'https://www.youtube.com/channel/UCs5ccxrTx9k8DN9YXnHm5AQ',
+        description: 'Good explanations of software architecture (spanish speaker).'
+    },
+    {
         name: 'Learnxinyminutes',
         paidOrFree: 'Free',
         type: 'Learn to code',
